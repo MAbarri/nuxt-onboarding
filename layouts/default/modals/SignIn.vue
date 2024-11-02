@@ -39,8 +39,7 @@ const logInWith = async (provider: string) => {
           <h3 class="text-xl font-semibold leading-6 text-gray-900">Sign in</h3>
           <div class="mt-2">
             <p class="text-sm text-gray-500">
-              This is strictly for demo purposes - only your email and profile
-              picture will be stored.
+              Choose the Login Provider that suits you
             </p>
           </div>
         </div>
@@ -55,8 +54,22 @@ const logInWith = async (provider: string) => {
           color="indigo"
           icon="i-mdi-google"
           size="lg"
+          class="mb-2"
         >
           Sign in with Google
+        </UButton>
+        <UButton
+          :loading="signInLoading"
+          :disabled="signInLoading"
+          @click.prevent="logInWith('google')"
+          type="button"
+          block
+          color="indigo"
+          icon="material-symbols:login"
+          size="lg"
+          class="mb-2"
+        >
+          Sign in
         </UButton>
       </div>
     </div>
