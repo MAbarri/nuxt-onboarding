@@ -3,7 +3,12 @@ import CTA from "~/layouts/default/sections/CTA.vue";
 import Features from "~/layouts/default/sections/Features.vue";
 import Hero from "~/layouts/default/sections/Hero.vue";
 import PoweredBy from "~/layouts/default/sections/PoweredBy.vue";
-
+definePageMeta({
+  auth: {
+    unauthenticatedOnly: true,
+    navigateAuthenticatedTo: '/',
+  },
+})
 const { seo } = useAppConfig();
 useSeoMeta({
   title: seo?.siteName,
