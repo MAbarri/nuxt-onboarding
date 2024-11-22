@@ -21,6 +21,23 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "nuxt-og-image",
   ],
+ 
+  auth: {
+    baseURL: '/api/auth',
+    provider: {
+      type: 'authjs',
+   /*    endpoints: {
+        signIn: { path: '/login', method: 'post' },
+        signOut: { path: '/logout', method: 'post' },getSession: { path: '/session', method: 'get' }, }, */
+        signUp: { path: '/register', method: 'post' },
+        
+     
+     
+      
+    
+    },
+    
+  },
   content: {
     highlight: {
       theme: "github-light",
@@ -41,11 +58,8 @@ export default defineNuxtConfig({
     icons: ["mdi", "heroicons", "simple-icons"],
   },
 
-  auth: {
-    provider: {
-      type: "authjs",
-    },
-  },
+ 
+   
 
   app: {
     pageTransition: { name: "page", mode: "out-in" },

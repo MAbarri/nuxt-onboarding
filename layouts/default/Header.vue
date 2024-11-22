@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 import SignIn from "~/layouts/default/modals/SignIn.vue";
+import SignUp from "./modals/SignUp.vue";
 
 const navigation = [
   { name: "Pricing", href: "pricing" },
@@ -53,6 +54,13 @@ const authStore = useAuthStore();
           class="text-sm font-semibold leading-6 text-gray-900"
         >
           Sign In <span aria-hidden="true">&rarr;</span>
+        </button>
+        <button
+          v-if="authStatus === 'unauthenticated'"
+          @click.prevent="authStore.toggleSignUpModal()"
+          class="text-sm font-semibold leading-6 text-gray-900"
+        >
+          Sign up <span aria-hidden="true">&rarr;</span>
         </button>
         <button
           v-else
