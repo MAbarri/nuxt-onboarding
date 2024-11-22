@@ -36,6 +36,14 @@
 </template>
 <script setup lang="ts">
 const secondaryNavigation = [
+{
+    name: "Profile",
+    href: "/dashboard/profile",
+    icon: "i-heroicons-user",
+    current: false,
+  },
+  
+
   {
     name: "Panel",
     href: "/dashboard",

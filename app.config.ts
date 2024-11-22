@@ -1,7 +1,12 @@
 export default defineAppConfig({
+  
   ui: {
     primary: "indigo",
     gray: "neutral",
+    notifications: {
+      // Show toasts at the top right of the screen
+      position: 'top-0 bottom-[unset]'
+    }
   },
   site: {
     name: "Nuxt SaaS Starter",
