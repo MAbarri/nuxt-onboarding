@@ -4,8 +4,8 @@ import SignIn from "~/layouts/default/modals/SignIn.vue";
 import SignUp from "./modals/SignUp.vue";
 
 const navigation = [
-  { name: "Pricing", href: "pricing" },
-  { name: "Docs", href: "docs" },
+  { name: "Tools", href: "../dashboard/tools" },
+  { name: "Workflows", href: "../dashboard/workflows" },
 ];
 const mobileMenuOpen = ref(false);
 const { status: authStatus } = useAuth();

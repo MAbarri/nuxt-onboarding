@@ -1,8 +1,8 @@
 <script setup>
 const { data, signOut } = useAuth();
 const navigation = [
-  { name: "Dashboard", href: "/dashboard" },
-  { name: "Documentation", href: "/docs" },
+  { name: "Tools", href: "/dashboard/tools" },
+  { name: "Workflows", href: "/dashboard/workflows" },
 ];
 const mobileMenuOpen = ref(false);
 </script>
